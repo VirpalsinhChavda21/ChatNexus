@@ -51,11 +51,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/resendotp"
         android:layout_marginTop="4dp"
         android:text="didn't receive code?"
         android:textColor="#3E9194"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/code_input" />
