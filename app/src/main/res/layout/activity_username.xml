@@ -4,6 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Username">
+    android:background="@drawable/chatnexus_bg"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    tools:context=".Verification">
+
+    <ImageView
+        android:id="@+id/buttonImageView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="104dp"
+        android:clickable="true"
+        android:background="@drawable/circular_background"
+        android:contentDescription="Add Photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/vectorImageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="564dp"
+        android:background="@drawable/circular_background"
+        android:clickable="true"
+        android:contentDescription="Add a Photo"
+        android:src="@drawable/add_a_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Please Select Your Photo"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonImageView" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Enter Your Username"
+        android:inputType="text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

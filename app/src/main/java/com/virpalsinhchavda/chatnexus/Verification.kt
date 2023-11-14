@@ -4,13 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.startActivity
 
 class Verification : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,19 +17,20 @@ class Verification : AppCompatActivity() {
 
         // Reference the button
         val backArrowButton: Button = findViewById(R.id.backarrowbutton)
-        val otpEditText: EditText = findViewById(R.id.code_input)
+        val otpEditText: EditText = findViewById(R.id.editTextnumber)
         val myButton: Button = findViewById(R.id.continue_button)
         val resendOtpTextView: TextView = findViewById(R.id.resendotp)
 
+        backArrowButton.setBackgroundResource(R.drawable.back)
         myButton.setBackgroundColor(Color.parseColor("#FFDDCF51"))
 
         myButton.setOnClickListener {
-            // Get the phone number from the EditText
-            val phoneNumber = otpEditText.text.toString()
+            // Get the otp number from the EditText
+            val otpNumber = otpEditText.text.toString()
 
-            // Check if the phone number is not empty
-            if (phoneNumber.isNotEmpty()) {
-                // If not empty, navigate to the Verification activity
+            // Check if the otp number is not empty
+            if (otpNumber.isNotEmpty()) {
+                // If not empty, navigate to the username activity
                 navigateToUsernameActivity()
             } else {
                 // If empty, display an error message
@@ -67,7 +66,7 @@ class Verification : AppCompatActivity() {
     }
 
     private fun navigateToUsernameActivity() {
-        val intent = Intent(this, Verification::class.java)
+        val intent = Intent(this, Username::class.java)
         startActivity(intent)
     }
 }
