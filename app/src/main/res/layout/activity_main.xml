@@ -48,6 +48,7 @@
         android:textColor="@color/black"
         android:inputType="number"
         android:maxLength="10"
+        android:minEms="10"
         android:paddingLeft="20dp"
         android:background="@drawable/rounded_edittext_background"
         app:layout_constraintStart_toStartOf="@+id/signup"

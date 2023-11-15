@@ -4,17 +4,21 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val numberEditText: EditText = findViewById(R.id.editTextnumber)
+        val NumberEditText: EditText = findViewById(R.id.editTextnumber)
         val myButton: Button = findViewById(R.id.buttonContinue)
 
         // Set the initial background color
@@ -22,16 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         // Set a click listener for the button
         myButton.setOnClickListener {
-            // Get the phone number from the EditText
-            val phoneNumber = numberEditText.text.toString()
+            val inputText = NumberEditText.text.toString()
 
-            // Check if the phone number is not empty
-            if (phoneNumber.isNotEmpty()) {
-                // If not empty, navigate to the Verification activity
+            if (inputText.length == 10) {
+                // If the input length is equal to 10, navigate to the next activity
                 navigateToVerificationActivity()
             } else {
-                // If empty, display an error message
-                Toast.makeText(this, "Please enter your number", Toast.LENGTH_SHORT).show()
+                // If the input length is less than 10, show an error message
+                NumberEditText.error = "Minimum length is 10 characters"
             }
         }
     }

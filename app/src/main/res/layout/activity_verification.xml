@@ -62,10 +62,10 @@
         android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextnumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextOTP" />
 
     <EditText
-        android:id="@+id/editTextnumber"
+        android:id="@+id/editTextOTP"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="56dp"
@@ -74,6 +74,7 @@
         android:paddingLeft="20dp"
         android:inputType="number"
         android:maxLength="6"
+        android:minEms="6"
         android:background="@drawable/rounded_edittext_background"
         app:layout_constraintStart_toStartOf="@+id/textcode"
         app:layout_constraintTop_toTopOf="@+id/textcode" />
