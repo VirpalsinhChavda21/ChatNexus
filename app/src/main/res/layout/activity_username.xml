@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,7 @@
     tools:context=".Verification">
 
     <ImageView
-        android:id="@+id/buttonImageView"
+        android:id="@+id/profileImageView"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="104dp"
@@ -18,25 +19,24 @@
         android:background="@drawable/circular_background"
         android:contentDescription="Add Photo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
     <ImageView
-        android:id="@+id/vectorImageView"
+        android:id="@+id/buttonImageView"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginBottom="564dp"
+        android:layout_marginBottom="548dp"
         android:background="@drawable/circular_background"
         android:clickable="true"
         android:contentDescription="Add a Photo"
+        android:layout_alignTop="@id/profileImageView"
+        android:layout_alignEnd="@id/profileImageView"
         android:src="@drawable/add_a_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,9 +44,8 @@
         android:layout_marginTop="28dp"
         android:text="Please Select Your Photo"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonImageView" />
 

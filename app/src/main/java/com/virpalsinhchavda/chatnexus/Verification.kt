@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -11,33 +13,30 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class Verification : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verification)
 
-        // Reference the button
         val backArrowButton: Button = findViewById(R.id.backarrowbutton)
-        val otpEditText: EditText = findViewById(R.id.editTextnumber)
         val myButton: Button = findViewById(R.id.continue_button)
         val resendOtpTextView: TextView = findViewById(R.id.resendotp)
+        val editText: TextView = findViewById(R.id.editTextOTP)
 
         backArrowButton.setBackgroundResource(R.drawable.back)
         myButton.setBackgroundColor(Color.parseColor("#FFDDCF51"))
 
         myButton.setOnClickListener {
-            // Get the otp number from the EditText
-            val otpNumber = otpEditText.text.toString()
+            val inputText = editText.text.toString()
 
-            // Check if the otp number is not empty
-            if (otpNumber.isNotEmpty()) {
-                // If not empty, navigate to the username activity
+            if (inputText.length == 6) {
+                // If the input length is equal to 6, navigate to the next activity
                 navigateToUsernameActivity()
             } else {
-                // If empty, display an error message
-                Toast.makeText(this, "Please 6-Digit OTP code", Toast.LENGTH_SHORT).show()
+                // If the input length is less than 6, show an error message
+                editText.error = "Minimum length is 6 characters"
             }
         }
-
         // Set a click listener for the button
         backArrowButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -49,6 +48,7 @@ class Verification : AppCompatActivity() {
             showResendOtp()
         }
     }
+
     private fun showResendOtp() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Resend OTP")

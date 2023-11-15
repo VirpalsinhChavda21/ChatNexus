@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "376615683875",
+    "project_id": "chatnexus-3b7b2",
+    "storage_bucket": "chatnexus-3b7b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376615683875:android:e501718f455c3f3bcfae96",
+        "android_client_info": {
+          "package_name": "com.virpalsinhchavda.chatnexus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW7G5Gl1WsSPX5cjvzr0COGDVaibpGjLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
